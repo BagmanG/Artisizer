@@ -238,9 +238,17 @@
     backdrop-filter: blur(5px);"></div>
 <div class="popup" style="display: none; z-index: 2">
     <div class="popup-content">
-        <h2>Welcome to My Service</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt bibendum augue, volutpat scelerisque nisl venenatis ut.</p>
-        <button class="close">Close</button>
+        <h2>Мы вам рады!</h2>
+        <p>Используя наш сервис вы получаете возможность пакетно сжимать все изображения в папке, Artisizer с легостью найдет и сожмет все картинки даже в дочерних папках!</p>
+        <h2>Инструкция</h2>
+        <h3>Шаг 1:</h3>
+        <p>Прочитайте и закройте инструкцию :)</p>
+        <h3>Шаг 2:</h3>
+        <p>Сожмите свою папку с картинками файлами и подпапками в zip или rar архив.</p>
+        <h3>Шаг 3:</h3>
+        <p>Возьмите файл с рабочего стола и переместите его в область Artisizer, или нажмите на кнопку загрузить, а затем выбирете файл.</p>
+        <p>Успех! Теперь у вас в загрузках архив, который содержит в себе исходную папку с сжатыми изображениями!</p>
+        <button class="close">Закрыть</button>
     </div>
 </div>
 <script>
