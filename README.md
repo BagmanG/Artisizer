@@ -28,7 +28,7 @@ git clone https://github.com/BagmanG/Artisizer.git
 Ознакомиться с документацией вы можете на нашей [Wiki](https://github.com/BagmanG/Artisizer/wiki) странице.
 
 # Контакты
-Если у вас возникли вопросы или предложения, связаться с нами вы можете [тут](https://t.me/famostik) и [тут](https://t.me/bagman2020) :) 
+Если у вас возникли вопросы или предложения, связаться с нами вы можете [тут](https://t.me/famostik) и [тут](https://t.me/bagman2020).
 
 # Лицензия
 
