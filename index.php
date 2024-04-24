@@ -26,6 +26,12 @@
         z-index: 1000;
     }
 
+    @media (max-width: 767px){
+        .no_news{
+            display: none;
+        }
+    }
+
     header .header-content {
         display: flex;
         justify-content: space-between;
@@ -186,8 +192,6 @@
     .dropFormWin{
         padding: 40px;
         border-radius: 20px;
-
-
     }
 </style>
     <meta charset="UTF-8">
@@ -216,13 +220,13 @@
 
         <div id="drop-zone" class="drop-zone">
             <div class="dropFormWin">
-            <p class="no_news">Переместите сюда архив с папкой ил...</p>
+            <p class="no_news">Переместите сюда zip архив с папкой или выберите файл в ручную>>></p>
             <input type="file" id="file-input" style="display: none" accept=".zip">
             <div id="file-list"></div>
             <div id="form-container">
                 <form action="artisizer/handler.php" method="post" enctype="multipart/form-data">
                     <input type="file" name="zipfile" id="zipfile" accept=".zip" style="display:none;" required>
-                    <button onclick="uploadZip();" type="button" class="button">Загрузить</button>
+                    <button onclick="uploadZip();" type="button" class="button">Выбрать файл</button>
                     <button id="submit-button" type="submit" class="button" disabled>Сжать</button>
                 </form>
             </div>
