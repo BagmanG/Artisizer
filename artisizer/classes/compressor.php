@@ -9,18 +9,42 @@ class Compressor
     
     private function compress_image($source, $destination, $quality) {
         $info = getimagesize($source);
-    
-        if ($info['mime'] == 'image/jpeg')
-            $image = imagecreatefromjpeg($source);
-    
-        elseif ($info['mime'] == 'image/gif')
-            $image = imagecreatefromgif($source);
-    
-        elseif ($info['mime'] == 'image/png')
-            $image = imagecreatefrompng($source);
-    
-        imagejpeg($image, $destination, $quality);
-    
+
+        // Create a new image from the source file
+        $image = null;
+        switch ($info['mime']) {
+            case 'image/jpeg':
+                $image = imagecreatefromjpeg($source);
+                break;
+            case 'image/gif':
+                $image = imagecreatefromgif($source);
+                break;
+            case 'image/png':
+                $image = imagecreatefrompng($source);
+                break;
+            default:
+                $image = null;
+
+                break;
+        }
+
+        // Save the compressed image to the destination file
+        switch ($info['mime']) {
+            case 'image/jpeg':
+                imagejpeg($image, $destination, $quality);
+                break;
+            case 'image/gif':
+                imagegif($image, $destination);
+                break;
+            case 'image/png':
+                imagepng($image, $destination, ($quality / 10)); // PNG quality is from 0 (lowest) to 9 (highest)
+                break;
+        }
+
+        // Free up memory
+        if($image)
+            imagedestroy($image);
+
         return $destination;
     }
     
